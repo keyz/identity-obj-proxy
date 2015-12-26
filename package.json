@@ -13,7 +13,7 @@
     "postinstall": "npm run build"
   },
   "engines": {
-    "node": ">=0.7.8"
+    "node": ">=0.11"
   },
   "repository": {
     "type": "git",
