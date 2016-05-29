@@ -1,9 +1,22 @@
-const Reflect = require('harmony-reflect'); // eslint-disable-line no-unused-vars
+var Reflect; // eslint-disable-line no-unused-vars
+var idObj;
 
-const idObjHandler = {
-  get: (target, key) => key,
-};
+function checkIsNodeV6OrAbove() {
+  if (typeof process === 'undefined') {
+    return false;
+  }
 
-const idObj = new Proxy({}, idObjHandler);
+  return parseInt(process.versions.node.split('.')[0], 10) >= 6;
+}
 
-export default idObj;
+if (!checkIsNodeV6OrAbove()) {
+  Reflect = require('harmony-reflect'); // eslint-disable-line global-require
+}
+
+idObj = new Proxy({}, {
+  get: function getter(target, key) {
+    return key;
+  }
+});
+
+module.exports = idObj;

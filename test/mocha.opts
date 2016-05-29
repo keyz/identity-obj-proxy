@@ -1,3 +1,0 @@
---require ./test/__setup__/polyfills.js
---compilers js:babel-core/register
---recursive

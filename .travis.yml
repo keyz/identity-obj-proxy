@@ -1,10 +1,11 @@
 language: node_js
 
 node_js:
-  - "5.3.0"
-  - "4.0"
-  - "0.12"
-  - "0.11"
+  - 6.2.0
+  - 5.3.0
+  - 4.0
+  - 0.12
+  - 0.11
 
 compiler: clang-3.6
 
@@ -19,3 +20,5 @@ addons:
     packages:
       - clang-3.6
       - g++-4.8
+
+after_success: npm run coveralls
