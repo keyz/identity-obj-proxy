@@ -1,6 +1,6 @@
 {
   "name": "identity-obj-proxy",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "an identity object using ES6 proxies",
   "main": "src/index.js",
   "scripts": {
