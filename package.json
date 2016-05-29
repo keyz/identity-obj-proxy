@@ -11,7 +11,7 @@
     "prepublish": "npm run lint && npm run test"
   },
   "engines": {
-    "node": ">=0.11"
+    "node": ">=4"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
     "eslint": "^2.11.0",
     "eslint-config-airbnb-base": "^3.0.1",
     "eslint-plugin-import": "^1.8.1",
-    "jest": "^12.1.1"
+    "jest-cli": "^12.1.1"
   },
   "jest": {
     "automock": false,
