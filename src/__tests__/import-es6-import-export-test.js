@@ -1,4 +1,4 @@
-import idObj from './idObjES6ImportExport';
+import idObj from '../test-redirections/idObjES6ImportExport';
 
 describe('idObj', () => {
   it('should return the key as a string', () => {

@@ -1,4 +1,4 @@
-const idObj = require('./idObjES6Import');
+const idObj = require('../test-redirections/idObjES6Import');
 
 describe('idObj', () => {
   it('should return the key as a string', () => {
