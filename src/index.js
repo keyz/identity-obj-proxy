@@ -1,3 +1,4 @@
+/* eslint-disable no-var, comma-dangle */
 var Reflect; // eslint-disable-line no-unused-vars
 var idObj;
 
@@ -15,6 +16,9 @@ if (!checkIsNodeV6OrAbove()) {
 
 idObj = new Proxy({}, {
   get: function getter(target, key) {
+    if (key === '__esModule') {
+      return false;
+    }
     return key;
   }
 });

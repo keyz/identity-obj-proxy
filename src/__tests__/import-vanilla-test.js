@@ -1,4 +1,4 @@
-const idObj = require('..');
+import idObj from '..';
 
 describe('idObj', () => {
   it('should return the key as a string', () => {

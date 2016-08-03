@@ -1,4 +1,4 @@
-const idObj = require('..');
+const idObj = require('./idObjES6ImportExport').default;
 
 describe('idObj', () => {
   it('should return the key as a string', () => {
