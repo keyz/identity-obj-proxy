@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src",
-    "test": "node --harmony_proxies node_modules/.bin/jest",
-    "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage",
+    "test": "node-version-gte-6 && jest || node --harmony_proxies node_modules/.bin/jest",
+    "coverage": "node-version-gte-6 && jest --coverage || node --harmony_proxies node_modules/.bin/jest --coverage",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls",
     "prepublish": "npm run lint && npm run test"
   },
@@ -31,23 +31,18 @@
   },
   "homepage": "https://github.com/keyanzhang/identity-obj-proxy#readme",
   "dependencies": {
-    "harmony-reflect": "^1.4.6"
+    "harmony-reflect": "^1.4.6",
+    "node-version-check": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
-    "babel-jest": "^14.1.0",
+    "babel-jest": "^19.0.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
     "coveralls": "^2.11.12",
     "eslint": "^3.2.2",
     "eslint-config-airbnb-base": "^5.0.1",
     "eslint-plugin-import": "^1.12.0",
-    "jest-cli": "^14.1.0"
-  },
-  "jest": {
-    "automock": false,
-    "testPathDirs": [
-      "<rootDir>/src"
-    ]
+    "jest": "^19.0.2"
   }
 }
