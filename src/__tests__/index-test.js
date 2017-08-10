@@ -10,4 +10,7 @@ describe('idObj', () => {
   it('should support bracket notation', () => {
     expect(idObj[1]).toBe('1');
   });
+  it('should handle undefined appropriately', () => {
+    expect(idObj[undefined]).toBe(undefined);
+  });
 });
