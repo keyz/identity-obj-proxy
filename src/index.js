@@ -19,6 +19,9 @@ idObj = new Proxy({}, {
     if (key === '__esModule') {
       return false;
     }
+    if (key === 'undefined') {
+      return undefined;
+    }
     return key;
   }
 });
