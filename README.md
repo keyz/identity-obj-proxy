@@ -37,7 +37,7 @@ exports[`test App renders correctly 1`] = `
 `;
 ```
 
-For more information, please take a look at https://github.com/keyanzhang/jest-css-modules-example/ and https://facebook.github.io/jest/docs/tutorial-webpack.html.
+For more information, please take a look at https://github.com/keyanzhang/jest-css-modules-example/ and https://jestjs.io/docs/en/webpack.html.
 
 ## Requirement
 No flag is required for Node.js `v6.*`; use `node --harmony_proxies` flag for `v5.*` and `v4.*`.
