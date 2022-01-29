@@ -3,7 +3,9 @@ var Reflect; // eslint-disable-line no-unused-vars
 var idObj;
 
 function checkIsNodeV6OrAbove() {
-  if (typeof process === 'undefined') {
+  if (typeof process === 'undefined'
+      || typeof process.versions === 'undefined'
+      || typeof process.versions.node !== 'string') {
     return false;
   }
 
